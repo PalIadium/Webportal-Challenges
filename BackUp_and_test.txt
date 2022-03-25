@@ -1,0 +1,42 @@
+Required Tasks:
+1. Backup the MySQL "wordpress" database from the Windows Database server at 172.16.20.4
+2. Migrate the MySQL "wordpress" database dump to the Debian Backup server at 172.16.30.79
+3. Restore the "wordpress" database into a new database named "wordpresstest" on the Debian Backup server at 172.16.30.79
+4. Maintain the integrity of the database during all migrations.
+
+Additional info:
+1. All vms 
+   playerone:password123
+2. MySQL 
+   root:
+3. Firewall
+   admin:password123
+
+Task 1. Backup the MySQL "wordpress" database from the Windows Database server at 172.16.20.4
+
+      mysql -u root                                     // Open mysql
+      SHOW DATABASES;                                   // Shows all databases in mysql (we should see "wordpress" database)
+      exit;                                             // Exit out of mysql to use terminal 
+
+      mysqldump wordpress --result-file=word_dump.sql   // dumps the wordpress database 
+      ls                                                // check for word_dump.sql
+
+Task 2. Migrate the MySQL "wordpress" database dump to the Debian Backup server at 172.16.30.79
+
+      ls                                                // check for word_dump.sql (happens to be in this very path)
+      scp word_dump.sql playerone@172.16.30.79:./       // move word_dump to the Debian Backup server at 172.16.30.79 (enter password123)
+      
+Task 3. Restore the "wordpress" database into a new database named "wordpresstest" on the Debian Backup server at 172.16.30.79
+      ls                                                // check for word_dump.sql
+      sudo mysql -u root                                // log into the databse
+      SHOW DATABASES;                                   // show all databases
+      CREATE DATABASE wordpresstest;                    // create databse wordpresstest
+      exit;                                             // exit back into the terminal
+      
+      sudo mysql -u root -p wordpresstest < word_dump.sql // import sql file into wordpresstest database
+      sudo mysql -u root                                  // enter mysql
+      
+      SHOW databases                                      // list databases 
+      USE wordpresstest;                                  // select wordpresstest 
+      SHOW TABLES;                                        // show tables (to prove that we imported the sql file successfully)
+      
