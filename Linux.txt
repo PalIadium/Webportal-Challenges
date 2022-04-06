@@ -7,24 +7,31 @@ Required Tasks:
     Location: production web server (172.16.10.7)
     Account name: rob
     Allow Rob to set his own password
-3. Update apache using the preinstalled system package manager
-
+3. Update apache using the preinstalled system package manager: "no built from source updates please"
 
 Additional info:
 1. All vms 
-   playerone:password123
-2. MySQL 
-   root:
-3. Firewall
-   admin:password123
-   
-   
-   
+   username: playerone
+   password: password123
+2. Firewall
+   username: admin
+   password: password123
+      
 Task 1. Create user account with permanent sudo/admin prvileges for Gary Thatcher
-
+    cat /etc/group                  // check for groups
+    adduser gthatcher               // create user gthatcher
+    usermod -aG sudo gthatcher      // give sudo privileges [Notice that the group does not exist. In centos you add to wheel group]  
+    usermod -aG wheel gthatcher     // add to wheel group
+    
 
 Task 2. Set up an account for intern Rob 
+    adduser bob                     // create user bob
+    
 
 
 
-Task 3. Update apache using the preinstalled system package manager
+Task 3. Update apache using the preinstalled system package manager: "no built from source updates please"
+    yum update apache               // yum because centOS [Notice the error: File contains no section headers]
+    sudo vim /etc/yum.repos.d/CentOS-Base.repo // Add [CentOS-Base] to the first line
+    
+    
