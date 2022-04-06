@@ -1,0 +1,30 @@
+Required Tasks:
+1. Create user account with permanent sudo/admin prvileges for Gary Thatcher 
+    Location: production web server (172.16.10.7)
+    Naming Convention: first initial and last name (i.e., John Doe = jdoe)
+    Allow Gary to set his own password
+2. Set up an account for intern Rob 
+    Location: production web server (172.16.10.7)
+    Account name: rob
+    Allow Rob to set his own password
+3. Update apache using the preinstalled system package manager
+
+
+Additional info:
+1. All vms 
+   playerone:password123
+2. MySQL 
+   root:
+3. Firewall
+   admin:password123
+   
+   
+   
+Task 1. Create user account with permanent sudo/admin prvileges for Gary Thatcher
+
+
+Task 2. Set up an account for intern Rob 
+
+
+
+Task 3. Update apache using the preinstalled system package manager
