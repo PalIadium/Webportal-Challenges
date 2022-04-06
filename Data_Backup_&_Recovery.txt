@@ -13,7 +13,6 @@ Additional info:
    admin:password123
 
 Task 1. Backup the MySQL "wordpress" database from the Windows Database server at 172.16.20.4
-
       mysql -u root                                     // Open mysql
       SHOW DATABASES;                                   // Shows all databases in mysql (we should see "wordpress" database)
       exit;                                             // Exit out of mysql to use terminal 
@@ -22,7 +21,6 @@ Task 1. Backup the MySQL "wordpress" database from the Windows Database server a
       ls                                                // check for word_dump.sql
 
 Task 2. Migrate the MySQL "wordpress" database dump to the Debian Backup server at 172.16.30.79
-
       ls                                                // check for word_dump.sql (happens to be in this very path)
       scp word_dump.sql playerone@172.16.30.79:./       // move word_dump to the Debian Backup server at 172.16.30.79 (enter password123)
       
