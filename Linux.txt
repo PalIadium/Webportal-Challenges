@@ -18,16 +18,18 @@ Additional info:
    password: password123
       
 Task 1. Create user account with permanent sudo/admin prvileges for Gary Thatcher
-    cat /etc/group                  // check for groups
+    [Open prod web server]
+    cat /etc/group                  // check groups
     adduser gthatcher               // create user gthatcher
     usermod -aG sudo gthatcher      // give sudo privileges [Notice that the group does not exist. In centos you add to wheel group]  
     usermod -aG wheel gthatcher     // add to wheel group
-    
+    cat /etc/group                  // check groups
 
 Task 2. Set up an account for intern Rob 
-    adduser bob                     // create user bob
+    adduser rob                         // create user rob
+    setfacl -m u:rob:rwx /var/www/html  // give rob sudo rw permissions for html folder because sudoedit
     
-
+    
 
 
 Task 3. Update apache using the preinstalled system package manager: "no built from source updates please"
