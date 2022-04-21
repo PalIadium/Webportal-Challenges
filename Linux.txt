@@ -34,9 +34,9 @@ Task 2. Set up an account for intern Rob
 
 Task 3. Update apache using the preinstalled system package manager: "no built from source updates please"
     [Open dev-web server]
-    sudo apt-get update 
-    sudo apt-get upgrade 
-    yum update apache               // yum because centOS [Notice the error: File contains no section headers]
+    sudo apt update 
+    sudo apt upgrade 
+    sudo apt upgrade apache               
     sudo vim /etc/yum.repos.d/CentOS-Base.repo // Add [CentOS-Base] to the first line
     
     
