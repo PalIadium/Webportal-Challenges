@@ -29,14 +29,19 @@ Task 2. Set up an account for intern Rob
     adduser rob                         // create user rob
     setfacl -m u:rob:rw /var/www/html   // give rob sudo rw permissions for html folder because sudoedit
     
-    
-
+    sudo vim /etc/sudoers               // the better solution
+    [Insert]
+        %rob ALL = sudoedit /var/www/html/
+        %rob ALL = NOPASSWD:/bin/systemctl * httpd
 
 Task 3. Update apache using the preinstalled system package manager: "no built from source updates please"
     [Open dev-web server]
-    sudo apt update 
-    sudo apt upgrade 
+    sudo yum update apache                      // Assuming they ONLY want to update and upgrade apache
     sudo apt upgrade apache               
     sudo vim /etc/yum.repos.d/CentOS-Base.repo // Add [CentOS-Base] to the first line
     
+    Unfortunately, we have a unreadable file for /etc/yum.repos.d/CentOS-Base.repo
+    
+    ![image](https://user-images.githubusercontent.com/55419454/164582756-9e903c32-05f2-4174-b4a6-8fd49b61ab1e.png)
+
     
