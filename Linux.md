@@ -11,9 +11,11 @@ Required Tasks:
 
 Additional info:
 1. All vms <br />
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   username: playerone <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   password: password123 <br />
 2. Firewall <br />
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   username: admin <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   password: password123 <br />
       
