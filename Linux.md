@@ -18,6 +18,7 @@ Additional info:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   password: password123 <br />
       
 Task 1. Create user account with permanent sudo/admin prvileges for Gary Thatcher <br />
+
     [Open prod web server] <br />
     cat /etc/group                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
     adduser gthatcher             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
