@@ -25,7 +25,8 @@ Task 1. Create user account with permanent sudo/admin prvileges for Gary Thatche
     usermod -aG wheel gthatcher   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  // add to wheel group<br />
     cat /etc/group                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  // check groups<br />
 
-Task 2. Set up an account for intern Rob 
+Task 2. Set up an account for intern Rob <br />
+    
     adduser rob                         // create user rob<br />
     setfacl -m u:rob:rw /var/www/html   // give rob sudo rw permissions for html folder because sudoedit<br />
     
