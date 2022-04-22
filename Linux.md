@@ -42,6 +42,6 @@ Task 3. Update apache using the preinstalled system package manager: "no built f
     
     Unfortunately, we have a unreadable file for /etc/yum.repos.d/CentOS-Base.repo
     
-    ![alt text](https://github.com/PalIadium/Webportal-Challenges/Images/unreadableCentOS-Base.repo.png)
+    ![alt text](https://github.com/PalIadium/Webportal-Challenges/Images/unreadable_CentOS-Base.repo.png)
 
     
